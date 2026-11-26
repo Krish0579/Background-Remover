@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Title</title>
+  <link href="https://googleapis.com" rel="stylesheet">
+
+</head>
+<style>
+    html,body{
+        font-family:'Poppins',sans-serif;
+        background:linear-gradient(white,pink);
+        min-height:100vh;
+        background-repeat:no-repeat;
+    }
+    .logo{
+        top:24px;
+        left:32px;
+        font-size:24px;
+        font-weight:800;
+        letter-spacing:-0.5px;
+        color:#1f2937;
+        cursor:pointer;
+    }
+    .logo span {
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+    h1{
+        font-size:30px;
+        text-decoration:underline;
+        text-decoration-style: wavy;     /* Options: solid, double, dotted, dashed, wavy */
+  text-decoration-color: gold;
+  text-decoration-thickness: 3px;
+    }
+    .upload{
+        text-align:center;
+    }
+    .bo{
+        display: block;
+        margin-top:12px;
+        text-align:left;
+    }
+
+</style>
+<body> 
+<div class="logo">Bg<span>remover</span></div>
+<h1 style ="text-align:center;">Background Remover</h1>
+<h3 style ="text-align:center;">100% free tool to removebg </h3>
+<div id="upload">
+<form action="/upload" method="POST" enctype="multipart/form-data">
+<input type="file" name="image" accept="image/*" required>
+<button type="submit" class="bo">RmBg</button>
+</form>
+</div>
+</body>
