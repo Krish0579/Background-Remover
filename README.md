@@ -53,9 +53,3 @@ An automated background removal web tool built with Python and Flask that isolat
 
 4. **Open in browser**
    Visit `http://127.0.0.1:5000` in your browser.
-
-## Future Improvements
-
-* Add live before-and-after image preview on the result page
-* Support custom background color replacement alongside transparent PNG export
-* Add batch processing for multiple images at once
