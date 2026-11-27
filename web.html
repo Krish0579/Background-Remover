@@ -35,13 +35,68 @@
   text-decoration-color: gold;
   text-decoration-thickness: 3px;
     }
-    .upload{
+    h3{
+        text-decoration:underline;     /* Options: solid, double, dotted, dashed, wavy */
+  text-decoration-color: gold;
+  text-decoration-thickness: 3px;
+    }
+    #upload{
+        max-width:300px;
+        margin:20px auto;
+        background: #ffffff;
+        padding: 18px;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(53, 52, 52, 0.15);
         text-align:center;
     }
+      .drop-zone {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      border: 2px dashed #ec4899;
+      border-radius: 14px;
+      background-color: #fdf2f8;
+      cursor: pointer;
+      /* transition: 0.2s ease; */
+    }
+    .drop-zone:hover {
+      background-color: #fce7f3;
+      border-color: #8b5cf6;
+    }
+    .drop-zone input[type="file"] {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .drop-text {
+      font-size: 16px;
+      color: #1f2937;
+      margin: 0 0 6px;
+    }
+
+    .drop-sub {
+      font-size: 13px;
+      color: #3f4551;
+      margin: 0;
+    }
+
     .bo{
         display: block;
         margin-top:12px;
         text-align:left;
+    }
+    form{
+        font-size:30px;
+    }
+    .bo:hover {
+      transform: translateY(-2px);
     }
 
 </style>
@@ -50,9 +105,18 @@
 <h1 style ="text-align:center;">Background Remover</h1>
 <h3 style ="text-align:center;">100% free tool to removebg </h3>
 <div id="upload">
+
 <form action="/upload" method="POST" enctype="multipart/form-data">
-<input type="file" name="image" accept="image/*" required>
+
+    <label for="fileInput" class="drop-zone" id="dropZone">
+        <p class="drop-text">☁️ Drag & drop image here or click to browse</p>
+        <p class="drop-sub">Supports JPG, PNG, WEBP</p>
+        <input type="file" name="image" accept="image/*" required>
+    </lable>
+
 <button type="submit" class="bo">RmBg</button>
+
 </form>
+
 </div>
 </body>
